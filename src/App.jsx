@@ -1,3 +1,5 @@
+import Header from "./components/header/Header";
+
 export default function App() {
-  return <div>From Vite to Clean</div>;
+  return <Header />;
 }
