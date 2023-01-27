@@ -7,6 +7,9 @@ const ThisWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 10px;
+
+  padding: 5px;
+
   background-color: ${(props) => (props.dark ? "black" : "white")};
   color: ${(props) => (props.dark ? "white" : "black")};
 `;
