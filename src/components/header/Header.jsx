@@ -2,34 +2,28 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import HeaderTitle from "./Header_Title";
+import WrapperFlex from "../Wrapper_Flex";
 
-const ThisWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  column-gap: 10px;
-
-  padding: 5px;
-
-  background-color: ${(props) => (props.dark ? "black" : "white")};
-  color: ${(props) => (props.dark ? "white" : "black")};
+const ChildWrapper = styled(WrapperFlex)`
+  border: none;
 `;
 
 export default function Header() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   return (
-    <ThisWrapper dark={isDark}>
-      <ThisWrapper dark={isDark}>
+    <WrapperFlex dark={isDark} justifyContent="space-between">
+      <ChildWrapper dark={isDark}>
         <HeaderTitle>Discover</HeaderTitle>
         <HeaderTitle>Start a project</HeaderTitle>
-      </ThisWrapper>
+      </ChildWrapper>
 
       <HeaderTitle>Logo</HeaderTitle>
 
-      <ThisWrapper dark={isDark}>
+      <ChildWrapper dark={isDark}>
         <HeaderTitle>Search</HeaderTitle>
         <HeaderTitle>Log in</HeaderTitle>
-      </ThisWrapper>
-    </ThisWrapper>
+      </ChildWrapper>
+    </WrapperFlex>
   );
 }
