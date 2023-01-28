@@ -11,7 +11,7 @@ const WrapperFlex = styled.div`
   align-items: center;
   column-gap: 1em;
 
-  padding: 0.5em;
+  padding: 1.2em;
 
   border: 1px;
   border-style: solid;
