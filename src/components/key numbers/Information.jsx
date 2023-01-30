@@ -1,25 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import styled from "styled-components";
-
-import WrapperFlex from "../Wrapper_Flex";
-
-const ChildWrapper = styled(WrapperFlex)`
-  flex-direction: column;
-  padding-left: 8em;
-  padding-right: 8em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-`;
-
-const Information_Title = styled.h1`
-  font-size: 2em;
-  font-weight: 400;
-`;
-const Information_Paragraph = styled.p`
-  font-size: 1em;
-  font-weight: 400;
-`;
 
 export default function Information() {
   const { isDark } = useSelector((state) => state.darkModeSlice);
@@ -52,3 +32,25 @@ export default function Information() {
     </WrapperFlex>
   );
 }
+
+import styled from "styled-components";
+
+import WrapperFlex from "../Wrapper_Flex";
+
+const ChildWrapper = styled(WrapperFlex)`
+  flex-direction: column;
+  padding-left: 8em;
+  padding-right: 8em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+`;
+
+const Information_Title = styled.h1`
+  font-size: 2em;
+  font-weight: 400;
+  color: green;
+`;
+const Information_Paragraph = styled.p`
+  font-size: 1em;
+  font-weight: 400;
+`;
