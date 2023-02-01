@@ -1,1 +1,1 @@
-# Kickstarter
+# Created using styled components
