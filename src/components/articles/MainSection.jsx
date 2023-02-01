@@ -1,10 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import FeaturedProject from "./featured_project/FeaturedProject";
 import RecommendedForYou from "./recommended for you/RecommendedForYou";
 
 export default function MainSection() {
+  const { isDark } = useSelector((state) => state.darkModeSlice);
+
   return (
-    <MainSectionComponent>
+    <MainSectionComponent dark={isDark}>
       <FeaturedProject />
       <RecommendedForYou />
     </MainSectionComponent>
@@ -20,6 +24,15 @@ const MainSectionComponent = styled.section`
   margin-top: 2em;
   padding-left: 5em;
   padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 2em;
+
+  border: 1px;
+  border-style: solid;
+  border-color: ${(props) => (props.dark ? "white" : "black")};
+
+  background-color: ${(props) => (props.dark ? "black" : "white")};
+  color: ${(props) => (props.dark ? "white" : "black")};
 `;
 
 export { MainSectionComponent };
